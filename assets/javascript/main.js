@@ -33,7 +33,7 @@ console.log(power(3, 4));
 
 //Factorial function
 console.log("Factorial functions");
-function Factorial(num) {
+function factorial(num) {
   let total = 1;
 
   while (num > 0) {
@@ -42,10 +42,10 @@ function Factorial(num) {
   }
   return total;
 }
-console.log(Factorial(5));
+console.log(factorial(5));
 
 console.log("Fibonacci Number Function");
-function Fibonacci(n) {
+function fibonacci(n) {
   let count = 2;
   let num1 = 0;
   let num2 = 1;
@@ -65,4 +65,19 @@ function Fibonacci(n) {
     return total;
   }
 }
-console.log(Fibonacci(8));
+console.log(fibonacci(5));
+console.log("Fibonacci Number Function2");
+function fibonacci2(n) {
+  let fibValue = [0, 1];
+  let count = 0;
+  let total = 0;
+  while (count < n) {
+    total = add(fibValue[count], fibValue[count + 1]);
+
+    fibValue.push(total);
+    count += 1;
+  }
+  console.log(fibValue);
+  return fibValue[n - 1];
+}
+console.log(fibonacci2(5));
